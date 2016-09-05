@@ -79,6 +79,7 @@ end_per_testcase(Testcase, Config) ->
 
 
 tracing_test(Config) ->
+false = true,
     case filelib:is_dir(?LOG_DIR) of
         true -> {ok, Files} = file:list_dir(?LOG_DIR),
                 [ok = file:delete(?LOG_DIR ++ F) || F <- Files];
